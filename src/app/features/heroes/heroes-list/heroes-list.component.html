@@ -1,0 +1,28 @@
+
+<section fxLayout="row" fxLayoutAlign="space-between center">
+  <app-chip-autocomplete
+    [title]="'Filter Heroes'"
+    [placeholder]="'Write hero name'"
+    [allItems]="allHeroNames"
+    (onFilter)="onFilterList($event)"
+    (onRemove)="onRemoveItem($event)"
+    *ngIf="allHeroNames && allHeroNames.length > 0">
+  </app-chip-autocomplete>
+  <div class="actions">
+    <button class="mat-raised-button"(click)="onAddEditHero()">Create Hero</button>
+  </div>
+</section>
+
+<mat-card class="component-card">
+  <app-hero-table
+    [title]="'Heroes'"
+    [dataSource]="dataSource"
+    [chartData]="chartData"
+    (delete)="onDelete($event)"
+    (update)="onAddEditHero($event)"
+    (select)="onSelect($event)"
+  >
+  </app-hero-table>
+</mat-card>
+
+

@@ -1,0 +1,19 @@
+.table-wrapper {
+  height: 80vh;
+  overflow: auto;
+
+  mat-table {
+    min-width: 1000px;
+    .custom-header {
+      text-align: left;
+      min-height: 300px;
+      padding-top: 20px;
+    }
+
+    ::ng-deep figure {
+      margin-left: -20px;
+    }
+  }
+}
+
+
